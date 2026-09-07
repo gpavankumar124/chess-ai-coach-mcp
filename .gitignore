@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+# Project data / caches (added in later phases)
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Local engine binaries
+engine/
+stockfish/
+*.exe
+
+# IDE
+.vscode/
+.idea/

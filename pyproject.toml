@@ -1,0 +1,32 @@
+[project]
+name = "chess-ai-coach-mcp"
+version = "1.0.0"
+description = "MCP server that lets an AI assistant analyze Chess.com data and give chess coaching."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Gajji Sai Pavan Kumar", email = "gpavankumar124@gmail.com" }
+]
+keywords = ["mcp", "chess", "chess.com", "stockfish", "fastmcp", "claude"]
+requires-python = ">=3.11"
+dependencies = [
+    "chess>=1.11.2",
+    "fastmcp>=2.0.0",
+    "requests>=2.34.2",
+]
+
+[project.urls]
+Repository = "https://github.com/gpavankumar124/chess-ai-coach-mcp"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+markers = [
+    "network: hits the real Chess.com API (deselect with -m 'not network')",
+    "engine: requires the Stockfish engine (skipped automatically if missing)",
+]
